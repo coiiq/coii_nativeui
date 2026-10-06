@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>meowwww?</title>
+  <script>
+    if (typeof GetParentResourceName === 'function') {
+      document.documentElement.classList.add('is-fivem');
+    }
+  </script>
+  <style>
+    html:not(.is-fivem) body { display: none !important; }
+    html, body, .coii-preview, .game-scene { background: transparent !important; }
+  </style>
+    <link rel="stylesheet" href="styles.css?v=0.9.50">
+    <link rel="stylesheet" href="quick-menu.css?v=0.9.50">
+</head>
+<body>
+  <main id="coii-preview" class="coii-preview" data-lighting="day">
+    <section class="game-scene" aria-label="In-game circular minimap concept">
+      <section class="navigation-module" aria-label="COII navigation minimap">
+        <div class="bearing-readout" aria-label="Current heading">
+          <strong id="bearing-value"><span id="bearing-number">226</span></strong>
+        </div>
+
+        <div class="instrument-frame">
+          <div class="outer-ticks" aria-hidden="true"></div>
+          <div class="major-ticks" aria-hidden="true"></div>
+          <div class="accent-arc" aria-hidden="true"></div>
+          <div class="map-shadow" aria-hidden="true"></div>
+          <div class="heading-notch" aria-hidden="true"></div>
+          <div class="compass-dial" aria-hidden="true">
+            <div class="intercardinal-ticks">
+              <span class="intercardinal-tick tick-nw"></span>
+              <span class="intercardinal-tick tick-ne"></span>
+              <span class="intercardinal-tick tick-se"></span>
+              <span class="intercardinal-tick tick-sw"></span>
+            </div>
+
+            <span class="cardinal cardinal-n">N</span>
+            <span class="cardinal cardinal-e">E</span>
+            <span class="cardinal cardinal-s">S</span>
+            <span class="cardinal cardinal-w">W</span>
+          </div>
+
+          <div class="minimap-viewport">
+            <svg class="minimap-map" viewBox="0 0 360 360" role="img" aria-labelledby="map-title map-description">
+              <title id="map-title">meow?/title>
+              <desc id="map-description">meow?</desc>
+              <defs>
+                <linearGradient id="terrain-base" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#759282"/>
+                  <stop offset="1" stop-color="#526f63"/>
+                </linearGradient>
+                <filter id="soft-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#17201d" flood-opacity=".45"/>
+                </filter>
+              </defs>
+
+              <rect width="360" height="360" fill="url(#terrain-base)"/>
+
+              <g class="terrain-zones">
+                <path d="M-22 52C44 82 95 67 135 18C170-26 214-21 245 22C276 65 321 70 382 45V-22H-22Z" fill="#638272"/>
+                <path d="M272-12C232 44 247 101 301 139C342 168 372 214 382 272V-12Z" fill="#45675a"/>
+                <path d="M-25 247C37 211 77 223 107 283C126 321 151 350 182 382H-25Z" fill="#668777"/>
+                <path d="M232 204C276 174 327 197 382 246V382H191C199 303 207 222 232 204Z" fill="#49695c"/>
+              </g>
+
+              <g class="contour-lines" fill="none" stroke="#9aafa2" stroke-width="1.25" opacity=".29">
+                <path d="M-18 86C49 121 110 103 150 52C185 7 241 5 282 42C323 79 348 82 381 70"/>
+                <path d="M-16 103C48 139 119 122 163 68C199 23 241 26 276 56C315 90 346 103 381 94"/>
+                <path d="M224 214C267 179 323 201 381 257"/>
+                <path d="M212 234C263 196 319 221 381 280"/>
+                <path d="M-15 263C41 230 80 241 103 293C121 334 144 362 167 381"/>
+                <path d="M-17 281C30 252 62 262 86 312C101 343 116 363 131 381"/>
+              </g>
+
+              <path class="river-shadow" d="M17-15C57 51 76 103 82 154C88 209 74 273 54 379"/>
+              <path class="river" d="M17-15C57 51 76 103 82 154C88 209 74 273 54 379"/>
+
+              <g class="minor-roads" fill="none" stroke="#aeb7ae" stroke-width="4" opacity=".58">
+                <path d="M-18 121C54 131 112 156 158 203C199 244 267 263 380 244"/>
+                <path d="M-17 298C49 281 91 259 123 224C164 181 224 167 382 178"/>
+                <path d="M139-16C128 62 143 118 180 157C219 199 241 251 253 381"/>
+                <path d="M312-13C272 69 267 128 292 180C313 224 318 286 305 380"/>
+                <path d="M-16 197C56 188 117 194 167 216C218 238 288 231 379 207"/>
+              </g>
+
+              <g class="main-roads" fill="none">
+                <path d="M-18 331C56 283 110 226 132 169C153 117 198 73 294-15" stroke="#6f7975" stroke-width="18"/>
+                <path d="M-18 331C56 283 110 226 132 169C153 117 198 73 294-15" stroke="#c6c8bd" stroke-width="11"/>
+                <path d="M99 382C119 306 155 271 211 253C269 235 322 193 380 121" stroke="#707a76" stroke-width="17"/>
+                <path d="M99 382C119 306 155 271 211 253C269 235 322 193 380 121" stroke="#c7c9be" stroke-width="10"/>
+              </g>
+
+              <g class="road-details" fill="none" stroke="#e1dfd2" stroke-width="1.5" stroke-dasharray="8 10" opacity=".65">
+                <path d="M-18 331C56 283 110 226 132 169C153 117 198 73 294-15"/>
+                <path d="M99 382C119 306 155 271 211 253C269 235 322 193 380 121"/>
+              </g>
+
+              <g class="buildings" fill="#425b51" opacity=".42">
+                <rect x="202" y="101" width="23" height="14" rx="2" transform="rotate(-29 202 101)"/>
+                <rect x="234" y="83" width="31" height="18" rx="2" transform="rotate(-29 234 83)"/>
+                <rect x="273" y="67" width="19" height="26" rx="2" transform="rotate(-17 273 67)"/>
+                <rect x="277" y="281" width="31" height="17" rx="2" transform="rotate(17 277 281)"/>
+                <rect x="313" y="258" width="18" height="27" rx="2" transform="rotate(17 313 258)"/>
+                <rect x="111" y="82" width="22" height="17" rx="2" transform="rotate(12 111 82)"/>
+              </g>
+
+              <path class="gps-route" d="M109 374C122 309 154 277 208 257C254 240 275 211 264 177C253 143 220 125 198 102C177 80 173 49 190 15"/>
+              <circle class="route-destination" cx="190" cy="15" r="5"/>
+
+              <g class="player-marker" filter="url(#soft-shadow)">
+                <circle cx="180" cy="203" r="17" fill="#13201d" fill-opacity=".22"/>
+                <path d="M180 174L194 215L180 207L166 215Z" fill="#f2eee2" stroke="#1a2321" stroke-width="3" stroke-linejoin="round"/>
+                <circle cx="180" cy="202" r="3" fill="#d8aa58"/>
+              </g>
+            </svg>
+
+            <span class="viewport-glass" aria-hidden="true"></span>
+          </div>
+
+          <span id="minimap-distance" class="minimap-distance">2.5 KM</span>
+        </div>
+
+        <div class="location-readout">
+          <span class="location-copy">
+            <strong>Great Chaparral</strong>
+            <small>Zancudo Grande Valley</small>
+          </span>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <section id="quick-menu" class="quick-menu" role="dialog" aria-modal="true" aria-labelledby="quick-title" hidden>
+    <div class="quick-architecture" aria-hidden="true"></div>
+    <div class="quick-rays" aria-hidden="true"><span class="quick-ray"></span><span class="quick-ray"></span><span class="quick-ray"></span><span class="quick-ray"></span></div>
+    <div class="quick-wash" aria-hidden="true"></div>
+    <div class="quick-panel">
+      <header class="quick-brand"><img id="quick-logo" class="quick-logo" src="logo.png" alt=""><span id="quick-brand">COII ROLEPLAY</span></header>
+      <div class="quick-heading"><h1 id="quick-title">Pause menu</h1></div>
+      <nav class="quick-actions" aria-label="Session actions">
+        <button type="button" data-quick="resume"><strong>Resume</strong></button>
+        <button type="button" data-quick="map"><strong>Map</strong></button>
+        <button type="button" data-quick="settings"><strong>Settings</strong></button>
+        <button type="button" data-quick="website" disabled><strong>Website</strong></button>
+        <button type="button" data-quick="prepareQuit"><strong>Disconnect</strong></button>
+      </nav>
+      <p id="quick-status" class="quick-status" role="status" aria-live="polite"></p>
+      <aside class="quick-session" aria-label="Player and location"><strong id="quick-player">Player</strong><span id="quick-location">San Andreas</span></aside>
+    </div>
+    <div id="quick-confirm" class="quick-confirm" role="alertdialog" aria-modal="true" aria-labelledby="quick-confirm-title" hidden>
+      <div class="quick-confirm-card"><p class="quick-kicker">UNTIL NEXT TIME</p><h2 id="quick-confirm-title">Disconnect?</h2><p>This leaves the server without closing FiveM.</p><div><button id="quick-cancel" type="button">Stay in the city</button><button id="quick-quit" type="button">Disconnect</button></div></div>
+    </div>
+  </section>
+  <div id="quick-transition" class="quick-transition" aria-hidden="true"></div>
+    <script src="theme.js?v=0.9.50"></script>
+    <script src="app.js?v=0.9.50"></script>
+    <script src="quick-menu.js?v=0.9.50"></script>
+</body>
+</html>
