@@ -175,6 +175,7 @@ function updateRuntime(data) {
 }
 
 if (isFiveM) {
+  document.documentElement.classList.add('is-fivem');
   window.addEventListener('message', (event) => {
     const data = event.data || {};
 

@@ -9,6 +9,7 @@
   const curtain = document.getElementById('quick-transition');
   const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const runtime = typeof GetParentResourceName === 'function';
+  if (runtime) document.documentElement.classList.add('is-fivem');
   let session = 0, busy = false, openedAt = 0;
   let generation = 0, curtainTimer;
   function cover(enabled) {
